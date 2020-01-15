@@ -8,8 +8,11 @@ defmodule Identicon do
   end
 
   def build_pixal_map(%Identicon.Image{grid: grid} = image) do
-    
+    Enum.map grid, fn({_code, index}) ->
+      horizontal = rem(index, 5) * 50
+      vertical = div(index,5) * 50
 
+    end
   end
 
   def filter_odd_squares(%Identicon.Image{grid: grid} = image) do
